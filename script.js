@@ -7,8 +7,13 @@ function makeRows(rows, cols) {
     let cell = document.createElement("div");
     //cell.innerText = (i + 1);
     container.appendChild(cell).className = "grid-item";
+    let btnErase = document.querySelector("#btnErase")
+    btnErase.addEventListener('click' , function(){
+      cell.style.backgroundColor= 'white';
+    })
     cell.addEventListener('mouseover', function(e) {
         e.target.style.backgroundColor = "orange";});
-  };
+    };
 };
 makeRows(16, 16);
+
